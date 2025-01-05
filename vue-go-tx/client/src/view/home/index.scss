@@ -1,0 +1,170 @@
+.body{
+  display: flex;
+  min-height: 700px;
+  max-height: 700px;
+  
+  .chat_box{
+    min-width: 700px;
+    background-color: white;
+    padding: 10px;
+    .chat_t{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height:10%;
+      .chat_t_l{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        .el-icon-arrow-left{
+          font-size: 16px;
+        }
+      }
+      .chat_t_r{
+        display: flex;
+        gap: 10px;
+        font-size: 16px;
+        color: green;
+      }
+    }
+    .chat_c{
+      min-height: 70%;
+      img{
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
+        min-height: 40px;
+        border-radius: 25px;
+      }
+      .messages{
+        min-height: 400px;
+        height: 400px; /* 确保有固定高度 */
+        overflow-y: scroll; 
+        -ms-overflow-style: none;  /* IE和Edge */
+        scrollbar-width: none; /* Firefox */
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        gap:10px;
+        .messages_item{
+          p{
+            color: #888;
+            font-size: 12px;
+            text-align: center;
+          }
+          .messages_item_b{
+            display: flex;
+            gap: 10px;
+          .messages_item_b_r{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+          }
+          }
+         
+        }
+        span:nth-child(1){
+          font-size: 12px;
+          color: #888;
+        }
+        .messages_item[data-sender-id="user"]{
+          .messages_item_b{
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-start;
+          }
+        }
+      }  
+    }
+    .chat_b{
+      min-height: 20%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      overflow:hidden;
+      white-space:normal;
+      word-wrap:break-word;
+      .input-field{
+        border: none;
+        box-shadow: none; /* 取消阴影效果 */
+        outline: none;
+        width: 100%;
+        height: 100px;
+        flex: 1;
+      }
+    }
+  }
+  .friend_box{
+    min-width: 700px;
+    padding: 10px;
+    img{
+      width: 40px;
+      min-width: 40px;
+      height: 40px;
+      min-height: 40px;
+    }
+    .friend_title{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .friend_input{
+      width: 80%;
+    }
+    .friend_list{
+      padding-top: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .friend_item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .friend_item_l{
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          .friend_item_l_r{
+            line-height: 5px;
+            p:nth-child(2){
+              font-size: 12px;
+              color: #888;
+            }
+          }
+        }
+        
+      }
+    }
+  }
+  .friend_info_box{
+    min-width: 500px;
+    padding: 100px;
+    img{
+      width: 80px;
+      min-width: 80px;
+      height: 80px;
+      min-height: 80px;
+      border-radius: 10px;
+    }
+    .friend_info_title{
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      line-height: 6px;
+      border-bottom: 1px solid #cec7c7;
+      p{
+        font-size: 14px;
+        color: #888;
+      }
+      p:nth-child(1){
+        font-size: 20px;
+        color: #000;
+      }
+    }
+    .friend_info_button{
+      padding: 50px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

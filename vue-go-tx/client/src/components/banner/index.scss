@@ -1,0 +1,26 @@
+.banner_box{
+  background-color:rgb(71, 133, 226);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 500px;
+  min-width: 50px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  img{
+    min-width: 25px;
+    height: 25px;
+    cursor: pointer; /* 鼠标悬停时显示手形光标 */
+    transition: transform 0.2s; /* 添加过渡效果 */
+    color: #888;
+  }
+  img:hover {
+    transform: scale(1.1); /* 悬停时放大效果 */
+  }
+  .banner_t{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
